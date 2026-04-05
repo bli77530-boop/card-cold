@@ -371,7 +371,8 @@ const cardImages = [
   'images/21.jpg',
   'images/20.jpg',
   'images/23.jpg',
-  'images/fish.png'
+  'images/fish.png',
+'images/cold.png'
 ];
 const cardActivities={'1.jpg':'品牌紀念小物','22.jpg':'買任一雞蛋仔送1杯梔春金烏龍','3.jpg':'現折10元（塔可系列除外）','4.jpg':'金桔系列折5元','21.jpg':'點中杯升級大杯免費','20.jpg':'金桔系列現折10元','23.jpg':'第二杯10塊'};
 // 卡片權重設定（稀有卡可設定較低權重）
@@ -383,7 +384,8 @@ const cardPool = [
   {img:'21.jpg', weight: 30},
   {img:'20.jpg', weight: 30},
   {img:'23.jpg', weight: 10},
-  {img:'images/fish.png', weight: 10}  // 稀有卡，權重低
+  {img:'images/fish.png', weight: 10},  // 稀有卡，權重低
+{img:'images/cold.png', weight: 10}  // 稀有卡，權重低
 ];
 
 function getDrawData() {
@@ -462,7 +464,7 @@ function startDraw() {
   }, 50);
 
   // ===== 在這裡指定抽到的卡片 =====
-  let chosenCard = 'images/fish.png'; 
+  let chosenCard = 'images/cold.png'; 
 
   // 3. 設定時間軸：轉 3 秒 + 停住等待 2 秒 = 總共 5 秒 (5000ms)
   centerCardTimeout = setTimeout(() => {
@@ -496,7 +498,7 @@ function showCenterCard(imageUrl) {
   centerCard.innerHTML = `
     <div class="flip-inner">
       <div class="flip-front" style="background-image: url('${imageUrl}')"></div>
-      <div class="flip-back" style="background-image: url('images/fish b.png')"></div>
+      <div class="flip-back" style="background-image: url('images/cold b.png')"></div>
     </div>
   `;
 
